@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px 10%;
+  background-color: "white";
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.logo img {
+  width: 3.2rem;
+  height: 3rem;
+}
+.nav__links {
+  list-style: none;
+  display: flex;
+}
+
+.nav__links a,
+.overlay__content a {
+  font-family: "Muli", sans-serif;
+  font-weight: 800;
+  color: #7a7a7a;
+  font-size: 0.96rem;
+  text-decoration: none;
+}
+
+.nav__links li {
+  padding: 0px 20px;
+}
+
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: #0088a9;
+}
+
+.cta {
+  padding: 9px 25px;
+  background-color: #785ed8;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: "Muli", sans-serif;
+  font-weight: 800;
+  transition: all 0.3s ease 0s;
+  color: white;
+}
+
+.cta:hover {
+  background-color: #534194;
+}
+
+/* Mobile Nav */
+
+.menu {
+  display: none;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: #24252a;
+  overflow-x: hidden;
+  transition: all 0.5s ease 0s;
+}
+
+.overlay--active {
+  width: 100%;
+}
+
+.overlay__content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay a {
+  padding: 15px;
+  font-size: 36px;
+  display: block;
+  transition: all 0.3s ease 0s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #0088a9;
+}
+.overlay .close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  color: #edf0f1;
+  cursor: pointer;
+}
+
+/* contents */
+
+.container {
+  margin-left: 2rem;
+}
+.details {
+}
+.product {
+  height: 19rem;
+  width: 20rem;
+  margin-top: 4rem;
+  margin-bottom: -3rem;
+}
+
+.stay-class {
+  font-family: "Muli", sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  width: 20rem;
+  padding-top: 5rem;
+  color: #393939;
+}
+.stay-details {
+  font-family: "Muli", sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  width: 18rem;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+  color: #393939;
+}
+
+.test {
+  margin-bottom: 3rem;
+}
+
+.test a {
+  color: white;
+  text-decoration: none;
+  font-family: "Muli", sans-serif;
+  font-weight: 800;
+  background-color: #785ed8;
+  height: 2rem;
+  width: 12%;
+  border-radius: 25px;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+.test-btn:hover {
+  background-color: #534194;
+}
+.subscribe-text {
+  font-family: "Muli", sans-serif;
+  font-weight: 500;
+  font-size: 0.8rem;
+  width: 18rem;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+  color: #393939;
+}
+
+.textfield {
+  border-radius: 5px;
+  height: 3rem;
+  width: 12rem;
+  border-width: 0.5px;
+  padding-left: 1.5rem;
+}
+
+.submit-btn {
+  border-radius: 5px;
+  height: 3rem;
+  width: 8rem;
+  background-color: #785ed8;
+  border-width: 0px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #534194;
+}
+
+.form-inline {
+  margin-bottom: 4rem;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .close {
+    font-size: 40px;
+    top: 15px;
+    right: 50px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .nav__links,
+  .cta {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .container {
+    display: grid;
+    justify-content: center;
+    grid-template-areas: "details image";
+  }
+  .details {
+    grid-area: details;
+  }
+  .product {
+    height: 40rem;
+    width: 43rem;
+    grid-area: image;
+    margin-left: 4rem;
+    margin-top: -1rem;
+  }
+
+  .stay-class {
+    font-family: "Muli", sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+    width: 25rem;
+    padding-top: 5rem;
+    color: #393939;
+  }
+  .stay-details {
+    font-family: "Muli", sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    width: 25rem;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    color: #393939;
+  }
+
+  .test {
+    margin-bottom: 3rem;
+  }
+
+  .test a {
+    color: white;
+    text-decoration: none;
+    font-family: "Muli", sans-serif;
+    font-weight: 800;
+    background-color: #785ed8;
+    height: 2rem;
+    width: 12%;
+    border-radius: 25px;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  .test-btn:hover {
+    background-color: #534194;
+  }
+  .subscribe-text {
+    font-family: "Muli", sans-serif;
+    font-weight: 500;
+    font-size: 0.8rem;
+    width: 25rem;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    color: #393939;
+  }
+  .textfield {
+    border-radius: 5px;
+    height: 3rem;
+    width: 20rem;
+    border-width: 0.5px;
+    padding-left: 1.5rem;
+  }
+
+  .submit-btn {
+    border-radius: 5px;
+    height: 3rem;
+    width: 8rem;
+    background-color: #785ed8;
+    border-width: 0px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .submit-btn:hover {
+    background-color: #534194;
+  }
+}

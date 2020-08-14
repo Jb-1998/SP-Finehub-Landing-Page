@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <title>Fine Social App</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-154645096-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-154645096-1");
+    </script>
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="/"
+        ><img src="assets/images/finelogo.png" alt="logo"
+      /></a>
+      <nav>
+        <ul class="nav__links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Features</a></li>
+        </ul>
+      </nav>
+      <p class="menu cta">Menu</p>
+    </header>
+    <div id="mobile__menu" class="overlay">
+      <a class="close">&times;</a>
+      <div class="overlay__content">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Features</a>
+      </div>
+    </div>
+    <div class="container">
+      <img src="assets/images/product.png" alt="" class="product" />
+
+      <div class="details">
+        <p class="stay-class">Stay connected, and Express yourself.</p>
+        <p class="stay-details">
+          An online community platform that gives importance to mental health by
+          providing community support and easy access to mental health services.
+        </p>
+        <div class="test">
+          <a
+            href="https://t.maze.design/15324728?fbclid=IwAR1xtORcdPihFp__QHYbju9trajdd6arShZYoF_M58kLrsr30dIi-rKTMvE"
+            class="test-btn"
+            target="_blank"
+          >
+            Test our app</a
+          >
+        </div>
+        <p class="subscribe-text">
+          Subscribe to get access to exclusive features such as 1 month free
+          consulation and future feature release such as music streaming, and
+          purple room.
+        </p>
+        <form class="form-inline">
+          <input
+            type="email"
+            id="inputEmail"
+            class="textfield"
+            placeholder="Enter your email address..."
+          />
+          <button type="submit" class="submit-btn">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <script type="text/javascript" src="scripts/script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+  </body>
+</html>
